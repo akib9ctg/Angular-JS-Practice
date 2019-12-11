@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="searchFilterModule">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/SearchFilter.js"></script>
+</head>
+<body ng-controller="searchFilterController">
+Search <input type="text" placeholder="Search Anything" ng-model="searchText"/><br/>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>University</th>
+        <th>CGPA</th>
+    </tr>
+    <tr ng-repeat="aStudent in students| filter:searchText">
+        <td>{{aStudent.name}}</td>
+        <td>{{aStudent.university}}</td>
+        <td>{{aStudent.CGPA}}</td>
+    </tr>
+</table>
+</body>
+</html>

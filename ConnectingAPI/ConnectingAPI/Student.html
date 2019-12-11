@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="APIModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/script.js"></script>
+    <title></title>
+</head>
+<body ng-controller="myAPIController">
+{{5+6}}
+<form>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" ng-model="student.name"/></td>
+        </tr>
+        <tr>
+            <td>Father Name</td>
+            <td><input type="text" ng-model="student.fatherName"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" ng-click="submitButton(student)"/></td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

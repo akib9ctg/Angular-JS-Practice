@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="listRepeat">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/listNestedRepeat.js"></script>
+    <title></title>
+</head>
+<body ng-controller="listRepeatController">
+<ul>
+    <li ng-repeat="eachCountry in countries">{{eachCountry.Name}}
+        <ul>
+            <li ng-repeat="eachCities in eachCountry.Cities">
+                {{eachCities}}-ParentIndex = {{$parent.$index}}, Index={{$index}}
+            </li>
+        </ul>
+        </li>
+
+</ul>
+</body>
+</html>

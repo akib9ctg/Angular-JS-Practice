@@ -1,0 +1,14 @@
+﻿<table>
+    <tr>
+        <td>Department</td>
+        <td>
+            <select ng-model="departmentName">
+                <option ng-repeat="department in departments">{{department}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Save" ng-click="saveDepartmentInfo()"/></td>
+    </tr>
+</table>

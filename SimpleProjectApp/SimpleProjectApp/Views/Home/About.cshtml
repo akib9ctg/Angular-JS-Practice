@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "All Data";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>All data from Database</p>
+<div ng-repeat="st in students">
+    <h3>{{st.Name}}</h3>
+    <h4>{{st.Department}}</h4>
+    <h4>{{st.Address}}</h4>
+</div>
+

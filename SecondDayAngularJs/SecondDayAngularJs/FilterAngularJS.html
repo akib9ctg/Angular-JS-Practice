@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html ng-app="filterAngularJS">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/filterAngularJS.js"></script>
+    <title></title>
+</head>
+<body ng-controller="filterAngularJSController">
+Row to display : <input type="number" step="1" min="0" ng-model="rowLimit"/>
+<table border="1">
+    <thead>
+    <tr>
+        <td>Normal Name</td>
+        <td>Upper Case Name</td>
+        <td>Lower Case Name</td>
+        <td>Date of Birth</td>
+        <td>Date of Birth [Formated]</td>
+        <td>Date of Birth [Formated] </td>
+        <td>Salary</td>
+        <td>Salary[Number Formated]</td>
+        <td>Salary[Decimal 2 Formated]</td>
+        <td>Salary[Currency Formated]</td>
+        <td>Salary[Currency Tk Formated]</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="eachEmployee in employees| limitTo: rowLimit">
+        <td>{{eachEmployee.Name}}</td>
+        <td>{{eachEmployee.Name | uppercase}}</td>
+        <td>{{eachEmployee.Name | lowercase}}</td>
+        <td>{{eachEmployee.DateOfBirth | date: "dd/MM/yyyy"}}</td>
+        <td>{{eachEmployee.DateOfBirth | date: "dd/MMM/yy"}}</td>
+        <td>{{eachEmployee.DateOfBirth | date: "dd-MMMM-yy"}}</td>
+        <td>{{eachEmployee.Salary}}</td>
+        <td>{{eachEmployee.Salary|number}}</td>
+        <td>{{eachEmployee.Salary|number:2}}</td>
+        <td>{{eachEmployee.Salary|currency}}</td>
+        <td>{{eachEmployee.Salary|currency:"Tk"}}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

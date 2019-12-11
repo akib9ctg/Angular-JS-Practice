@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html ng-app="sortingFilter">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/SortingFilter.js"></script>
+</head>
+<body ng-controller="sortingFilterController">
+Order By= <select ng-model="sortColumn">
+    <option value="+Name">Asc Name</option>
+    <option value="-Name">Desc Name</option>
+    <option value="+Salary">Asc Salary</option>
+    <option value="-Salary">Desc Salary</option>
+
+</select>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <tr ng-repeat="eachEmployee in employees | orderBy: sortColumn">
+        <td>{{eachEmployee.Name}}</td>
+        <td>{{eachEmployee.Salary}}</td>
+    </tr>
+</table>
+</body>
+</html>

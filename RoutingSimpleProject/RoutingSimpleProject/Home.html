@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="routingMiniProjectModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/script.js"></script>
+    <title></title>
+</head>
+<body>
+<div>
+    {{2+3}}
+    <a href="#!Student">Student</a>
+    <a href="#!department">Department</a>
+    <a href="#!details">Details</a>
+</div>
+<div>
+    <ng-view></ng-view>
+</div>
+</body>
+</html>

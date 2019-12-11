@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="HandlingEvent">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/HandlingEvents.js"></script>
+    <title></title>
+</head>
+<body ng-controller="HandlingEventController">
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Like</th>
+        <th>Dislike</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="eachTech in technologies">
+            <td>{{eachTech.name}}</td>
+            <td>{{eachTech.likes}}</td>
+            <td>{{eachTech.disLikes}}</td>
+            <td><input type="button" ng-click="incrementLikes(eachTech)" value="Like"/></td>
+            <td><input type="button" ng-click="incrementDisLikes(eachTech)" value="Dislike" /></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

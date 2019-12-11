@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/script.js"></script>
+    <title></title>
+</head>
+<body ng-controller="myController">
+<form name="userForm" >
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" ng-model="name"  />
+            </td>
+        </tr>
+        <tr>
+            <td>Department:</td>
+            <td>
+                <select ng-model="department">
+                    <option  ng-repeat="department in departments"> {{department}}</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>CGPA</td>
+            <td>
+                <input type="text" ng-model="CGPA"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Save" ng-model="hide" ng-click="hideMe()"/></td>
+        </tr>
+    </table>
+
+</form>
+<br/>
+<br/>
+<div ng-hide="hide">
+    Name: {{name}}<br/>
+    Department: {{department}}<br/>
+    CGPA: {{CGPA}}<br/>
+</div>
+</body>
+</html>

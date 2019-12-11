@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="CustomServiceModule">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Scripts/angular.js"></script>
+    <script src="/Scripts/CreateCustomService.js"></script>
+    <script src="/Scripts/StringService.js"></script>
+    
+
+</head>
+<body ng-controller="CustomServiceController">
+    Input<input type="text" ng-model="input" /><br />
+    Output<input type="text" ng-model="output" /><br />
+    <input type="button" value="Generate Output" ng-click="showOutput(input)" />
+</body>
+</html>

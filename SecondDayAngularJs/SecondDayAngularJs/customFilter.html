@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app="customFilterModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/customFilter.js"></script>
+    <title></title>
+</head>
+<body ng-controller="customFilterController">
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+    </tr>
+    <tr ng-repeat="eachEmployee in employees">
+        <td>{{eachEmployee.Name}}</td>
+        <td>{{eachEmployee.Gender|gender}}</td>
+        <td>{{eachEmployee.Salary}}</td>
+    </tr>
+</table>
+</body>
+</html>

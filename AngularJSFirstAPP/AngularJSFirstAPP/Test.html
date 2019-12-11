@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/nestedDirective.js"></script>
+    <title></title>
+</head>
+<body ng-app="nested">
+<div ng-controller="nestedController">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>University</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="eachEmployee in employees">
+            <td>{{ eachEmployee.Name }}</td>
+            <td>{{ eachEmployee.University }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
